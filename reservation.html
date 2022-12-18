@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    <body>
+      <h3> 강의실 예약</h3>
+      <br>
+      <form action="/main" method="GET">
+        <fieldset>
+          <legend>예약 정보</legend>
+          <br>
+          <label for="sub">예약자 : </label>
+          <Input type="text" name = "person" id="sub"/><br>
+          <label for="phone">휴대폰번호:
+          <input type="tel" name = "tell" id="phone" pattern="(01[0-9]{1})-[0-9]{3,4}-[0-9]{4}"/><br>
+          예약인원:
+          <select name = "persons" size="1">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="8">9~</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <br>
+          <legend> 날짜 및 시간 선택</legend>
+          <input type = "date" name = "name"/>
+          <input type = "time" name = "time" min="09:00" max = "18:00"/><br>
+          <br>
+          <label for="etc"> 추가 : </label>
+          <input type="checkbox" name="et" id = "choice" value="elec_table"/>전자 교탁
+          <input type="checkbox" name="et" id = "choice" value="PC"/> PC
+          <input type="checkbox" name="et" id = "choice" value="smart_board"/>스마트보드
+          <input type="checkbox" name="et" id = "choice" value="LCD_DVD"/>LCD/DVD
+          <input type="checkbox" name="et" id = "choice" value="beam"/>빔프로젝터
+          <br>
+          <form id="formdata">
+            <legend class="fileuploder"> 집회신고서 파일 :
+                <label for="ex_file"></label>
+                <input type="file" id="ex_file" name="filename" multiple>
+            </legend>
+            </fieldset>
+            <input type="submit" value="예약" p onclick = "alert('예약이 완료되었습니다')" ></p>
+            <input type="submit" value="취소" p onclick = "alert('예약이 취소되었습니다')" ></p>
+        </form>
+
+  
+  </body>
+</html>
